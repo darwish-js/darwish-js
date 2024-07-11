@@ -1,4 +1,4 @@
-import { isArray, isDate, isMap, isObject, isSet } from './isTypings';
+import { isArray, isDate, isMap, isObject, isSet } from "./isTypings";
 type Nullable = undefined | null | never | Record<PropertyKey, never>;
 /**
  *
@@ -20,7 +20,7 @@ export default function isBlanks<T>(data: T): data is CustomNullable<T> {
   }
 
   // 判断空格的字符串和转义符
-  if (typeof data === 'string') {
+  if (typeof data === "string") {
     return /^\s*$/.test(data);
   }
 
@@ -33,5 +33,6 @@ export default function isBlanks<T>(data: T): data is CustomNullable<T> {
   if (isDate(data)) {
     return Number.isNaN(data.getTime());
   }
+  /* eslint-disable-next-line no-extra-boolean-cast */
   return !Boolean(data);
 }

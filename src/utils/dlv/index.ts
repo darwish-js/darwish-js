@@ -1,5 +1,4 @@
-/* eslint-disable no-param-reassign */
-import { isArray, isDev, isFunction, isObject, isString } from "@darwish/is";
+import { isArray, isFunction, isObject, isString } from "@darwish/is";
 
 /**
  * @description Get value from object by path.
@@ -18,9 +17,6 @@ export default function dlv<T>(
   undef?: T
 ) {
   if (!isObject(obj)) {
-    if (isDev) {
-      console.error("obj is not an object");
-    }
     return obj;
   }
 
