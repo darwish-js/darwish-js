@@ -26,8 +26,5 @@
     "darwish"
   ],
   "author": "darwish <28958230@qq.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^20.14.10"
-  }
+  "license": "MIT"
 }

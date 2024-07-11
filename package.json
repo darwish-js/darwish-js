@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . -c eslint.config.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^2.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^20.14.10",
+    "eslint": "^9.6.0"
+  }
 }
