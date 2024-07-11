@@ -1,0 +1,33 @@
+{
+  "name": "@darwish/utils-is",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/index.js",
+  "module": "./esm/index.js",
+  "types": "./lib/index.d.ts",
+  "typings": "./lib/index.d.ts",
+  "files": [
+    "esm",
+    "lib",
+    "tsconfig.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "pnpm build:cjs && pnpm build:es",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "is",
+    "darwish"
+  ],
+  "author": "darwish <28958230@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.10"
+  }
+}
