@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . -c eslint.config.mjs",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "engines": {
     "node": ">=18.0.0",

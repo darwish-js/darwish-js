@@ -14,20 +14,21 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node_version: ['18.x', '20.x']
+        node_version: ["18.x", "20.x"]
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node_version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node_version }}
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node_version }}
 
-    - name: Install Pnpm
-      run: npm install -g pnpm
+      - name: Install Pnpm
+        run: npm install -g pnpm
 
-    - name: pnpm install, build and test
-      run: |
-        pnpm install -w
-        pnpm lint
+      - name: pnpm install, build and test
+        run: |
+          pnpm install -w
+          pnpm test
+          pnpm lint

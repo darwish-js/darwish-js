@@ -1,5 +1,3 @@
-export const isDate = (value: unknown): value is Date =>
-  objProtoCallType(value, "date");
 /**
  * Check if the value is an object, excluding proxies
  * if excludeProxy is true, it will return false if the value is a proxy
@@ -17,6 +15,8 @@ export const isNull = (value: unknown): value is null =>
   objProtoCallType(value, "null");
 export const isBigint = (value: unknown): value is bigint =>
   typeof value === "bigint";
+export const isDate = (value: unknown): value is Date =>
+  objProtoCallType(value, "date");
 export const isArray = (value: unknown): value is any[] => Array.isArray(value);
 export const isSymbol = (value: unknown): value is symbol =>
   typeof value === "symbol";
