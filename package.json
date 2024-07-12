@@ -4,19 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . -c eslint.config.mjs"
+    "lint": "eslint . -c eslint.config.mjs",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.6.0",
     "@types/node": "^20.14.10",
     "eslint": "^9.6.0",
-    "vitest": "^2.0.2"
-  },
-  "dependencies": {
-    "@eslint/js": "^9.6.0",
     "globals": "^15.8.0",
-    "typescript-eslint": "^7.16.0"
+    "typescript-eslint": "^7.16.0",
+    "vitest": "^2.0.2"
   }
 }

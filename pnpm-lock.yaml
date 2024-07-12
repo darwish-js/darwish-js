@@ -7,8 +7,14 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@eslint/js':
+        specifier: ^9.6.0
+        version: 9.6.0
+      '@types/node':
+        specifier: ^20.14.10
+        version: 20.14.10
+      eslint:
         specifier: ^9.6.0
         version: 9.6.0
       globals:
@@ -17,13 +23,6 @@ importers:
       typescript-eslint:
         specifier: ^7.16.0
         version: 7.16.0(eslint@9.6.0)(typescript@5.5.3)
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.10
-        version: 20.14.10
-      eslint:
-        specifier: ^9.6.0
-        version: 9.6.0
       vitest:
         specifier: ^2.0.2
         version: 2.0.2(@types/node@20.14.10)
