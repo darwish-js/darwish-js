@@ -1,4 +1,4 @@
-import { isArray, isDate, isMap, isObject, isSet } from "./isTypings";
+import { isArray, isDate, isMap, isObject, isSet, isSymbol } from "./isTypings";
 type Nullable = undefined | null | never | Record<PropertyKey, never>;
 /**
  *
@@ -33,6 +33,12 @@ export default function isBlanks<T>(data: T): data is CustomNullable<T> {
   if (isDate(data)) {
     return Number.isNaN(data.getTime());
   }
+
+  // 判断Symbol
+  if (isSymbol(data)) {
+    return data.description === undefined || data.description === null;
+  }
+
   /* eslint-disable-next-line no-extra-boolean-cast */
   return !Boolean(data);
 }
