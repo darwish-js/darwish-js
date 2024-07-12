@@ -1,4 +1,4 @@
 packages:
-  - 'src/docs/**'
-  - 'src/hooks/**'
-  - 'src/utils/**'
+  - 'packages/docs/**'
+  - 'packages/hooks/**'
+  - 'packages/utils/**'
