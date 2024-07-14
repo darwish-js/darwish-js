@@ -1,4 +1,4 @@
-import { isArray, isFunction, isObject, isString } from "@darwish/is";
+import { isArray, isFunction, isObject, isString } from "@darwish/utils-is";
 
 /**
  * @description Get value from object by path.

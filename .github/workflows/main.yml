@@ -27,8 +27,11 @@ jobs:
       - name: Install Pnpm
         run: npm install -g pnpm
 
-      - name: pnpm install, build and test
-        run: |
-          pnpm install -w
-          pnpm test
-          pnpm lint
+      - name: pnpm install,
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Run lint
+        run: pnpm lint
