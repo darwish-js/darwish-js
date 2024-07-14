@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { isBlanks } from "@darwish/utils-core";
+import { isBlanks } from "../../";
 
 test("isBlanks", () => {
   expect(isBlanks("")).toBe(true);
