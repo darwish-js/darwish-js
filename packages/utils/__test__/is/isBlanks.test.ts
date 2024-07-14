@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { isBlanks } from "../../";
+import { isBlanks } from "../..";
 
 test("isBlanks", () => {
   expect(isBlanks("")).toBe(true);

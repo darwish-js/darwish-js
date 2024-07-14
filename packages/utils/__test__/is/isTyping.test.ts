@@ -17,7 +17,7 @@ import {
   isNumber,
   isRegExp,
   isPromise,
-} from "../../";
+} from "../..";
 
 test("isObject", () => {
   expect(isObject({})).toBe(true);
