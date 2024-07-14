@@ -17,7 +17,7 @@ import {
   isNumber,
   isRegExp,
   isPromise,
-} from "@darwish/utils-is";
+} from "@darwish/utils-core";
 
 test("isObject", () => {
   expect(isObject({})).toBe(true);

@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { typeOfData } from "@darwish/utils-tools";
+import { typeOfData } from "@darwish/utils-core";
 
 test("typeOfData", () => {
   expect(typeOfData(null)).toBe("null");
