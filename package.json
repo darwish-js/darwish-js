@@ -22,6 +22,10 @@
     "eslint": "^9.6.0",
     "globals": "^15.8.0",
     "typescript-eslint": "^7.16.0",
-    "vitest": "^2.0.2"
+    "vitest": "^2.0.2",
+    "@darwish/types": "latest",
+    "@darwish/utils-is": "workspace:*",
+    "@darwish/utils-tools": "workspace:*",
+    "@darwish/utils-core": "workspace:*"
   }
 }

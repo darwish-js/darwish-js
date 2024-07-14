@@ -7,8 +7,8 @@ export default defineWorkspace([
     // // 添加 "extends" 将两个配置合并到一起
     // // extends: "./vite.config.js",
     test: {
-      include: ["/packages/utils/__test__/**/*.{browser}.test.{ts,js}"],
-      name: "darwish-utils",
+      include: ["__test__/**/*.{browser}.test.{ts,js}"],
+      name: "utils",
       environment: "is",
     },
   },

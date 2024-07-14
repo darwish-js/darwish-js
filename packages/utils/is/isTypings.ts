@@ -42,38 +42,34 @@ export const isArrayBuffer = (value: unknown): value is ArrayBuffer =>
   objProtoCallType(value, "arraybuffer");
 export const isDataView = (value: unknown): value is DataView =>
   objProtoCallType(value, "dataview");
-// export const isTypedArray = (value: unknown): value is TypedArray =>
-//   objProtoCallType(value, "typedarray");
-// export const isArrayBufferView = (value: unknown): value is ArrayBufferView =>
-//   isTypedArray(value) || isDataView(value);
 export const isWeakMap = (value: unknown): value is WeakMap<any, any> =>
   objProtoCallType(value, "weakmap");
 export const isWeakSet = (value: unknown): value is WeakSet<any> =>
   objProtoCallType(value, "weakset");
-export const isArrayBufferLike = (value: unknown): value is ArrayBufferLike =>
-  isArrayBuffer(value) || isSharedArrayBuffer(value);
-export const isSharedArrayBuffer = (
-  value: unknown
-): value is SharedArrayBuffer => objProtoCallType(value, "sharedarraybuffer");
-export const isInt8Array = (value: unknown): value is Int8Array =>
-  objProtoCallType(value, "int8array");
-export const isUint8Array = (value: unknown): value is Uint8Array =>
-  objProtoCallType(value, "uint8array");
-export const isUint8ClampedArray = (
-  value: unknown
-): value is Uint8ClampedArray => objProtoCallType(value, "uint8clampedarray");
-export const isInt16Array = (value: unknown): value is Int16Array =>
-  objProtoCallType(value, "int16array");
-export const isUint16Array = (value: unknown): value is Uint16Array =>
-  objProtoCallType(value, "uint16array");
-export const isInt32Array = (value: unknown): value is Int32Array =>
-  objProtoCallType(value, "int32array");
-export const isUint32Array = (value: unknown): value is Uint32Array =>
-  objProtoCallType(value, "uint32array");
-export const isFloat32Array = (value: unknown): value is Float32Array =>
-  objProtoCallType(value, "float32array");
-export const isFloat64Array = (value: unknown): value is Float64Array =>
-  objProtoCallType(value, "float64array");
+// export const isArrayBufferLike = (value: unknown): value is ArrayBufferLike =>
+//   isArrayBuffer(value) || isSharedArrayBuffer(value);
+// export const isSharedArrayBuffer = (
+//   value: unknown
+// ): value is SharedArrayBuffer => objProtoCallType(value, "sharedarraybuffer");
+// export const isInt8Array = (value: unknown): value is Int8Array =>
+//   objProtoCallType(value, "int8array");
+// export const isUint8Array = (value: unknown): value is Uint8Array =>
+//   objProtoCallType(value, "uint8array");
+// export const isUint8ClampedArray = (
+//   value: unknown
+// ): value is Uint8ClampedArray => objProtoCallType(value, "uint8clampedarray");
+// export const isInt16Array = (value: unknown): value is Int16Array =>
+//   objProtoCallType(value, "int16array");
+// export const isUint16Array = (value: unknown): value is Uint16Array =>
+//   objProtoCallType(value, "uint16array");
+// export const isInt32Array = (value: unknown): value is Int32Array =>
+//   objProtoCallType(value, "int32array");
+// export const isUint32Array = (value: unknown): value is Uint32Array =>
+//   objProtoCallType(value, "uint32array");
+// export const isFloat32Array = (value: unknown): value is Float32Array =>
+//   objProtoCallType(value, "float32array");
+// export const isFloat64Array = (value: unknown): value is Float64Array =>
+//   objProtoCallType(value, "float64array");
 
 const objProtoCallType = <T>(value: unknown, type: T) =>
   Object.prototype.toString.call(value).slice(8, -1).toLowerCase() === type;
