@@ -17,7 +17,7 @@
     "build:cjs": "tsc",
     "build:es": "tsc -m esNext --outDir esm",
     "build": "pnpm build:cjs && pnpm build:es",
-    "prepublish": "npm run build & npm publish",
+    "prepublish": "npm run build & npm publish"
   },
   "dependencies": {
     "@darwish/utils-is": "latest"
