@@ -24,10 +24,10 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
 
-      - name: Install Pnpm
+      - name: Install Pnpm globally
         run: npm install -g pnpm
 
-      - name: pnpm install,
+      - name: Install dependencies
         run: pnpm install
 
       - name: Run tests
