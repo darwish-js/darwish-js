@@ -12,7 +12,7 @@ import { isArray, isFunction, isObject, isString } from "@darwish/utils-is";
 export default function dlv<T>(
   obj: Darwish.AnyObj,
   key: string | string[],
-  def?: string,
+  def?: T | ((...args: any[]) => T),
   p?: number,
   undef?: T
 ) {
